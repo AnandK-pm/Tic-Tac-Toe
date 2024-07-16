@@ -1,0 +1,133 @@
+body {
+    font-family:monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #151313;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    border: 2px solid #6a6969;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #000000;
+}
+
+.player1, .player2 {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.result {
+    font-family: monospace;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #fcfcfc;
+    color: rgba(0, 0, 0, 0.977);
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+button:hover {
+    background-color: #ababab;
+}
+
+dialog {
+    color: white;
+    width: 300px;
+    padding: 20px;
+    background-color: #151313;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="submit"] {
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.invisible
+{
+    display: none;
+}
+#submit
+{
+    display: none;
+}
+#sub
+{
+    font-size: 1.1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #000000;
+    border: 2px solid white;
+    background-color: #ffffff;
+    width:60%;
+    height:25px;
+    margin-top: 30px;
+}
+#sub:hover
+{
+    cursor: pointer;
+    background-color: #ccc;
+}
+.players
+{
+    display: flex;
+    justify-content: space-between;
+    gap:400px;
+    margin-top: -50px;
+    font-family: monospace;
+}
