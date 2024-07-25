@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded",()=>{
             dialog.close();
             initializeGame(player1, player2);
         }
-    
-   
     })
 
     
@@ -49,9 +47,14 @@ document.addEventListener("DOMContentLoaded",()=>{
                     const row = parseInt(pos[0], 10);
                     const col = parseInt(pos[1], 10);
                     if (game.turn % 2 === 0){
+                        cell.classList.remove("o_red")
+                        cell.classList.add("x_green");
                     play(player1, row, col, game);}
                     else
-                    {play(player2, row, col, game)}
+                    {
+                        cell.classList.remove("x_green");
+                        cell.classList.add("o_red")
+                        play(player2, row, col, game)}
                     display(game.board);
                     console.log(board);
                 }
